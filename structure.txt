@@ -1,0 +1,14 @@
+R: shipit-backend
+  R: app
+    F: main.py
+    R: api
+      F: routes.py
+    R: services
+      F: fedex.py
+    R: models
+      F: shipment.py
+    F: database.py
+    F: config.py
+  F: requirements.txt
+  F: Dockerfile
+  F: .env
