@@ -42,13 +42,22 @@ shipit-backend/
 └── .env
 ```
 
-
 Run this with:
 ```bash
 python Tree_generator.py structure.txt
 ```
 
 This will create the full folder tree and all empty files listed in `structure.txt`.
+
+## 🆕 Latest Changes
+- **Full sync mode** – aligns the directory structure exactly with `structure.txt`:  
+  - Creates missing files/folders.  
+  - Permanently removes items not listed.  
+- **Idempotent** – no changes occur on repeated runs unless the manifest is modified.  
+  - Adding lines → creates new items.  
+  - Removing lines → deletes corresponding items.  
+- **2-space indentation** – defines hierarchy levels in the manifest.  
+- **Verbose logging** – clear output for every created or deleted item.  
 
 ## 🛠️ How it works
 
